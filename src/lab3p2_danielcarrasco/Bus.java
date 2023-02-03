@@ -10,13 +10,13 @@ public class Bus extends Vehiculos {
     private int cantPasageros;
     private String tipo;
 
-    public Bus(int cantPasageros, String tipo, String color, String marca, String modelo, Date fechaFab, double precio) {
+    public Bus(int cantPasageros, String tipo, String color, String marca, String modelo, String fechaFab, double precio) {
         super(color, marca, modelo, fechaFab, precio);
         this.cantPasageros = cantPasageros;
         this.tipo = tipo;
     }
 
-    public Bus(String color, String marca, String modelo, Date fechaFab, double precio) {
+    public Bus(String color, String marca, String modelo, String fechaFab, double precio) {
         super(color, marca, modelo, fechaFab, precio);
     }
 
@@ -72,11 +72,11 @@ public class Bus extends Vehiculos {
         this.modelo = modelo;
     }
 
-    public Date getFechaFab() {
+    public String getFechaFab() {
         return fechaFab;
     }
 
-    public void setFechaFab(Date fechaFab) {
+    public void setFechaFab(String fechaFab) {
         this.fechaFab = fechaFab;
     }
 
@@ -86,6 +86,11 @@ public class Bus extends Vehiculos {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "Bus{" + "cantPasageros=" + cantPasageros + ", tipo=" + tipo + '}';
     }
     
     

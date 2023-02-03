@@ -13,7 +13,9 @@ public class Lab3P2_DanielCarrasco {
 
     public static void main(String[] args) {
         boolean banderita= true;
-        Clientes cliente= new Clientes();
+        ArrayList <Concesionaria> concesionarias= new ArrayList();
+        ArrayList <Clientes> clientecitos= new ArrayList();
+        //Clientes cliente= new Clientes();
         
         try{
         while(banderita == true){
@@ -41,9 +43,22 @@ public class Lab3P2_DanielCarrasco {
                 
                 switch(opCons){
                     case 1:
+                        Scanner consS = new Scanner(System.in);
                         System.out.println("Bienvenido a crear concesionaria-----");
                         System.out.println("Ingrese el nombre de la concesionaria");
-                        System.out.println("Ingrese");
+                        String nombreC= consS.nextLine();
+                        System.out.println("Ingrese la direccion de la concesionaria");
+                        String direccionC= consS.nextLine();
+                        System.out.println("Ingrese el saldo de la concesionaria");
+                        double saldoC= consS.nextInt();
+                        
+                        int iDE=0;                
+                        for (int i = 0; i < concesionarias.size(); i++) {
+                            iDE= iDE+1;
+                        }
+                        
+                        Concesionaria concesionaria= new Concesionaria(nombreC,iDE,direccionC,saldoC);
+                        concesionarias.add(concesionaria);
                         break;
                     case 2:
                         

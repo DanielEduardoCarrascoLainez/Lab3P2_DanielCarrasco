@@ -10,13 +10,13 @@ public class Moto extends Vehiculos {
     private int desplMotor;
     private boolean electrica;
 
-    public Moto(int desplMotor, boolean electrica, String color, String marca, String modelo, Date fechaFab, double precio) {
+    public Moto(int desplMotor, boolean electrica, String color, String marca, String modelo, String fechaFab, double precio) {
         super(color, marca, modelo, fechaFab, precio);
         this.desplMotor = desplMotor;
         this.electrica = electrica;
     }
 
-    public Moto(String color, String marca, String modelo, Date fechaFab, double precio) {
+    public Moto(String color, String marca, String modelo, String fechaFab, double precio) {
         super(color, marca, modelo, fechaFab, precio);
     }
 
@@ -60,11 +60,11 @@ public class Moto extends Vehiculos {
         this.modelo = modelo;
     }
 
-    public Date getFechaFab() {
+    public String getFechaFab() {
         return fechaFab;
     }
 
-    public void setFechaFab(Date fechaFab) {
+    public void setFechaFab(String fechaFab) {
         this.fechaFab = fechaFab;
     }
 
@@ -74,6 +74,11 @@ public class Moto extends Vehiculos {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "Moto{" + "desplMotor=" + desplMotor + ", electrica=" + electrica + '}';
     }
     
     

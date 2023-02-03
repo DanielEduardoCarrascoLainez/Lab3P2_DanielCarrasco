@@ -12,14 +12,14 @@ public class Carro extends Vehiculos {
     private String descMMotor;
     private int velMax;
 
-    public Carro(int cantidadPuertas, String descMMotor, int velMax, String color, String marca, String modelo, Date fechaFab, double precio) {
+    public Carro(int cantidadPuertas, String descMMotor, int velMax, String color, String marca, String modelo, String fechaFab, double precio) {
         super(color, marca, modelo, fechaFab, precio);
         this.cantidadPuertas = cantidadPuertas;
         this.descMMotor = descMMotor;
         this.velMax = velMax;
     }
 
-    public Carro(String color, String marca, String modelo, Date fechaFab, double precio) {
+    public Carro(String color, String marca, String modelo, String fechaFab, double precio) {
         super(color, marca, modelo, fechaFab, precio);
     }
 
@@ -71,11 +71,11 @@ public class Carro extends Vehiculos {
         this.modelo = modelo;
     }
 
-    public Date getFechaFab() {
+    public String getFechaFab() {
         return fechaFab;
     }
 
-    public void setFechaFab(Date fechaFab) {
+    public void setFechaFab(String fechaFab) {
         this.fechaFab = fechaFab;
     }
 
@@ -85,6 +85,11 @@ public class Carro extends Vehiculos {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "Carro{" + "cantidadPuertas=" + cantidadPuertas + ", descMMotor=" + descMMotor + ", velMax=" + velMax + '}';
     }
     
     
