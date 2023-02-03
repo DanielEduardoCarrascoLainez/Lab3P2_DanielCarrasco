@@ -12,12 +12,13 @@ public class Lab3P2_DanielCarrasco {
     static Scanner ninetales = new Scanner(System.in);
 
     public static void main(String[] args) {
+        try{
         boolean banderita= true;
         ArrayList <Concesionaria> concesionarias= new ArrayList();
         ArrayList <Clientes> clientecitos= new ArrayList();
         //Clientes cliente= new Clientes();
         
-        try{
+        
         while(banderita == true){
         
         System.out.println("Bienvenidx al programa");
@@ -61,10 +62,38 @@ public class Lab3P2_DanielCarrasco {
                         concesionarias.add(concesionaria);
                         break;
                     case 2:
+                        Scanner consCa= new Scanner(System.in);
+                        for (int i = 0; i < concesionarias.size(); i++) {
+                            System.out.println(i+"-. ["+concesionarias.get(i)+"]");
+                        }
+                        System.out.println("------------------------------");
+                        System.out.println("Ingrese el numero de concesionaria que desea cambiar");
+                        int posCambiar=consCa.nextInt();
                         
+                        if(posCambiar<concesionarias.size()-1){
+                            System.out.println("Ingrese la nueva direccion");
+                            String direccionN= consCa.nextLine();
+                            concesionarias.get(posCambiar).setDireccionE(direccionN);
+                            System.out.println("Se ha cambiado la direccion correctamente");
+                        }else{
+                            System.out.println("No puedes cambiar cosas que no existen");
+                        }
                         break;
                     case 3:
+                        Scanner consEli= new Scanner(System.in);
+                        for (int i = 0; i < concesionarias.size(); i++) {
+                            System.out.println(i+"-. ["+concesionarias.get(i)+"]");
+                        }
+                        System.out.println("------------------------------");
+                        System.out.println("Ingrese el numero de concesionaria que desea cambiar");
+                        int posEliminar=consEli.nextInt();
                         
+                        if(posEliminar<concesionarias.size()-1){
+                            concesionarias.remove(posEliminar);
+                            System.out.println("Concesionaria eliminada");
+                        }else{
+                            System.out.println("Lo lamento, no puedes eliminar cosas que no existen");
+                        }
                         break;
                     default:
                         System.out.println("Saliendo...");
