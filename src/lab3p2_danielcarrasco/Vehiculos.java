@@ -5,16 +5,16 @@
 package lab3p2_danielcarrasco;
 
 //import java.awt.Color;
-import java.util.Date;
+//import java.util.Date;
 
 public class Vehiculos {
     protected String color;
     protected String marca;
     protected String modelo;
-    protected Date fechaFab;
+    protected String fechaFab;
     protected double precio;
 
-    public Vehiculos(String color, String marca, String modelo, Date fechaFab, double precio) {
+    public Vehiculos(String color, String marca, String modelo, String fechaFab, double precio) {
         this.color = color;
         this.marca = marca;
         this.modelo = modelo;
@@ -46,11 +46,11 @@ public class Vehiculos {
         this.modelo = modelo;
     }
 
-    public Date getFechaFab() {
+    public String getFechaFab() {
         return fechaFab;
     }
 
-    public void setFechaFab(Date fechaFab) {
+    public void setFechaFab(String fechaFab) {
         this.fechaFab = fechaFab;
     }
 

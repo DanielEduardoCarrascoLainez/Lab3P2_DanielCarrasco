@@ -7,12 +7,12 @@ package lab3p2_danielcarrasco;
 import java.util.ArrayList;
 
 public class Clientes {
-    private String ID;
+    private int ID;
     private String nombre;
     private ArrayList <Vehiculos> vehiculosCliente = new ArrayList();
     private double saldo;
 
-    public Clientes(String ID, String nombre, double saldo) {
+    public Clientes(int ID, String nombre, double saldo) {
         this.ID = ID;
         this.nombre = nombre;
         this.saldo = saldo;
@@ -21,11 +21,11 @@ public class Clientes {
     public Clientes() {
     }
 
-    public String getID() {
+    public int getID() {
         return ID;
     }
 
-    public void setID(String ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 
