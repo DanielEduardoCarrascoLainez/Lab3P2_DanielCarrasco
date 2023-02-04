@@ -32,6 +32,7 @@ public class Lab3P2_DanielCarrasco {
         int opUss= ninetales.nextInt();
         
         switch (opUss){
+            //Inicio CRUD CONCESIONARIA
             case 1:
                 Scanner nine = new Scanner(System.in);
                 System.out.println("------------------------------");
@@ -70,9 +71,10 @@ public class Lab3P2_DanielCarrasco {
                         System.out.println("Ingrese el numero de concesionaria que desea cambiar");
                         int posCambiar=consCa.nextInt();
                         
-                        if(posCambiar<concesionarias.size()-1){
+                        if(posCambiar<=concesionarias.size()-1){
+                            Scanner seTrabo= new Scanner(System.in);
                             System.out.println("Ingrese la nueva direccion");
-                            String direccionN= consCa.nextLine();
+                            String direccionN= seTrabo.nextLine();
                             concesionarias.get(posCambiar).setDireccionE(direccionN);
                             System.out.println("Se ha cambiado la direccion correctamente");
                         }else{
@@ -88,7 +90,7 @@ public class Lab3P2_DanielCarrasco {
                         System.out.println("Ingrese el numero de concesionaria que desea cambiar");
                         int posEliminar=consEli.nextInt();
                         
-                        if(posEliminar<concesionarias.size()-1){
+                        if(posEliminar<=concesionarias.size()-1){
                             concesionarias.remove(posEliminar);
                             System.out.println("Concesionaria eliminada");
                         }else{
@@ -97,12 +99,40 @@ public class Lab3P2_DanielCarrasco {
                         break;
                     default:
                         System.out.println("Saliendo...");
+                        break;
                 }
                 
                 break;
+                //Fin CRUD CONCESIONARIA
+                //Inicio CRUD Clientes
             case 2:
+                Scanner tales = new Scanner(System.in);
+                System.out.println("------------------------------");
+                System.out.println("------CRUD Concesionaria------");
+                System.out.println("1-. Crear Cliente");
+                System.out.println("2-. Eliminar Cliente");
+                System.out.println("3-. Salir");
+                int opCliente= tales.nextInt();
                 
-                break;
+                switch(opCliente){
+                    case 1:
+                        Scanner clientesC = new Scanner(System.in);
+                        System.out.println("Bienvenido a crear Cliente-----");
+                        System.out.println("Ingrese su Nombre");
+                        String nombreC= clientesC.nextLine();
+                        System.out.println("Ingrese su saldo");
+                        double saldoC;
+                        
+                        
+                        break;
+                    case 2:
+                        
+                        break;
+                    default:
+                        System.out.println("Saliendo...");
+                        break;
+                }
+                //Fin CRUD Clientes
             case 3:
                 
                 break;
@@ -111,6 +141,7 @@ public class Lab3P2_DanielCarrasco {
                 break;
             default:
                 System.out.println("Gracias vuelva pronto");
+                banderita=false;
                 break;
         }
         
