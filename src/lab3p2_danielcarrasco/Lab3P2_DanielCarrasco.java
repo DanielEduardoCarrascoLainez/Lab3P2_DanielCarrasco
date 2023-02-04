@@ -16,6 +16,7 @@ public class Lab3P2_DanielCarrasco {
         boolean banderita= true;
         ArrayList <Concesionaria> concesionarias= new ArrayList();
         ArrayList <Clientes> clientecitos= new ArrayList();
+        ArrayList <Vehiculos> vehiculitos= new ArrayList();
         //Clientes cliente= new Clientes();
         
         
@@ -172,6 +173,7 @@ public class Lab3P2_DanielCarrasco {
                 int llantas= ninetal.nextInt();
                 
                 boolean calleB;
+                boolean electrica;
                 Scanner cualEs= new Scanner(System.in);
                 if(llantas==2){
                     System.out.println("Es una bici o una moto? bici/moto");
@@ -189,6 +191,20 @@ public class Lab3P2_DanielCarrasco {
                             calleB= true;
                         }
                         Bici bicicleta = new Bici(descBici,radioB,calleB,colores,marca,modelo,fecha,precioV);
+                        vehiculitos.add(bicicleta);
+                    }else{
+                        System.out.println("Cuanto desplazamiento tiene el motor");
+                        int desplMotor= cualEs.nextInt();
+                        System.out.println("Es electrica= s/n");
+                        String electricas= cualEs.nextLine();
+                        if (electricas.equalsIgnoreCase("s")){
+                          electrica= true;  
+                        }
+                        else{
+                          electrica= false;  
+                        }
+                        Moto motito= new Moto(desplMotor,electrica,colores,marca,modelo,fecha,precioV);
+                        vehiculitos.add(motito);
                     }
                     
                 }
