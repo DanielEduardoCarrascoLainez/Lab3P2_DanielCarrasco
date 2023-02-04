@@ -27,8 +27,8 @@ public class Lab3P2_DanielCarrasco {
         System.out.println("1-. CRUD Concesionaria");
         System.out.println("2-. CRUD Clientes");
         System.out.println("3-. CRUD Vehiculos");
-        System.out.println("4-.Compra y venta");
-        System.out.println("Salir");
+        System.out.println("4-. Compra y venta");
+        System.out.println("5-. Salir");
         int opUss= ninetales.nextInt();
         
         switch (opUss){
@@ -61,6 +61,7 @@ public class Lab3P2_DanielCarrasco {
                         
                         Concesionaria concesionaria= new Concesionaria(nombreC,iDE,direccionC,saldoC);
                         concesionarias.add(concesionaria);
+                        System.out.println("Concesionaria creada con exito");
                         break;
                     case 2:
                         Scanner consCa= new Scanner(System.in);
@@ -121,12 +122,32 @@ public class Lab3P2_DanielCarrasco {
                         System.out.println("Ingrese su Nombre");
                         String nombreC= clientesC.nextLine();
                         System.out.println("Ingrese su saldo");
-                        double saldoC;
+                        double saldoC= clientesC.nextDouble();
                         
+                        int iDEC=0;                
+                        for (int i = 0; i < clientecitos.size(); i++) {
+                            iDEC= iDEC+1;
+                        }
+                        Clientes cliente= new Clientes(iDEC,nombreC,saldoC);
+                        clientecitos.add(cliente);
+                        System.out.println("Cliente creado con exito");
                         
                         break;
                     case 2:
+                        Scanner clientesEli= new Scanner(System.in);
+                        for (int i = 0; i < clientecitos.size(); i++) {
+                            System.out.println(i+"-. ["+clientecitos.get(i)+"]");
+                        }
+                        System.out.println("------------------------------");
+                        System.out.println("Ingrese el numero del cliente que desea cambiar");
+                        int posEliminarC=clientesEli.nextInt();
                         
+                        if(posEliminarC<=clientecitos.size()-1){
+                            clientecitos.remove(posEliminarC);
+                            System.out.println("Cliente eliminadx");
+                        }else{
+                            System.out.println("Lo lamento, no puedes eliminar clientes que no existen");
+                        }
                         break;
                     default:
                         System.out.println("Saliendo...");
@@ -147,7 +168,7 @@ public class Lab3P2_DanielCarrasco {
         
         
         }
-        //Aqui
+        //Aqui, no toques danieeeeel
         } catch (Exception e){
             
         }
