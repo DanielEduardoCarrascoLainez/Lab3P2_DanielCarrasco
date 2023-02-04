@@ -171,13 +171,26 @@ public class Lab3P2_DanielCarrasco {
                 System.out.println("Ingrese la cantidad de llantas");
                 int llantas= ninetal.nextInt();
                 
+                boolean calleB;
                 Scanner cualEs= new Scanner(System.in);
                 if(llantas==2){
                     System.out.println("Es una bici o una moto? bici/moto");
                     String biMo= cualEs.nextLine();
                     if(biMo.equalsIgnoreCase("bici")){
-                        
+                        System.out.println("Ingrese la descripcion de la bici");
+                        String descBici=cualEs.nextLine();
+                        System.out.println("Ingrese el radio de las ruedas ejemplo 10 o 20");
+                        int radioB= cualEs.nextInt();
+                        System.out.println("Es de calle la bici? c si es de calle, otra letra si es BMX");
+                        String bici= cualEs.nextLine();
+                        if(bici.equalsIgnoreCase("s")){
+                            calleB= true;
+                        }else{
+                            calleB= true;
+                        }
+                        Bici bicicleta = new Bici(descBici,radioB,calleB,colores,marca,modelo,fecha,precioV);
                     }
+                    
                 }
                 
                 
