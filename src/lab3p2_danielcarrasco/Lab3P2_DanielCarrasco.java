@@ -155,7 +155,39 @@ public class Lab3P2_DanielCarrasco {
                 }
                 //Fin CRUD Clientes
             case 3:
+                Scanner nineta= new Scanner(System.in);
+                System.out.println("Bienvenido a crear vehiculos-----");
+                System.out.println("Ingrese el color");
+                String colores= nineta.nextLine();
+                System.out.println("Ingrese el marca");
+                String marca= nineta.nextLine();
+                System.out.println("Ingrese el modelo");
+                String modelo= nineta.nextLine();
+                Scanner ninetal= new Scanner(System.in);
+                System.out.println("Ingrese el fecha");
+                String fecha= ninetal.nextLine();
+                System.out.println("Ingrese el precio");
+                double precioV= ninetal.nextDouble();
+                System.out.println("Ingrese la cantidad de llantas");
+                int llantas= ninetal.nextInt();
                 
+                Scanner cualEs= new Scanner(System.in);
+                if(llantas==2){
+                    System.out.println("Es una bici o una moto? bici/moto");
+                    String biMo= cualEs.nextLine();
+                    if(biMo.equalsIgnoreCase("bici")){
+                        
+                    }
+                }
+                
+                
+                /*
+                String color;
+    protected String marca;
+    protected String modelo;
+    protected String fechaFab;
+    protected double precio;
+                */
                 break;
             case 4:
                 
